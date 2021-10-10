@@ -6,16 +6,18 @@ function MenuButton({ handleToggle, isNavOpen }) {
         isNavOpen ? 'w-12' : 'w-14'
       }`}>
       <div
-        className={`origin-left w-full h-0.5 bg-green-500 transition duration-500 ${
-          isNavOpen ? 'transform rotate-45' : ''
+        className={`origin-left w-full h-0.5  transition duration-500 ${
+          isNavOpen
+            ? 'transform rotate-45 bg-red-500 top-px relative'
+            : 'bg-green-500'
         }`}></div>
       <div
-        className={`w-full h-0.5 bg-green-500 transition duration-500 ${
-          isNavOpen ? 'opacity-0' : ''
+        className={`w-full h-0.5  transition duration-500 ${
+          isNavOpen ? 'opacity-0' : 'bg-green-500'
         }`}></div>
       <div
-        className={`origin-left w-full h-0.5 bg-green-500 transition duration-500 ${
-          isNavOpen ? 'transform -rotate-45' : ''
+        className={`origin-left w-full h-0.5  transition duration-500 ${
+          isNavOpen ? 'transform -rotate-45 bg-red-500' : 'bg-green-500'
         }`}></div>
     </div>
   );

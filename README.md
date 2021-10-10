@@ -4,7 +4,7 @@ This project was made in my learning journey on [The Odin Project](https://www.t
 
 To download the source code, just clone my repository.
 
-The in the project directory, run
+Then in the project directory, run
 
 ### `npm init`
 

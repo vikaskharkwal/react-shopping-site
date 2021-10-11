@@ -49,7 +49,7 @@ function Nav(props) {
             }`}
             to='/shop'>
             <FontAwesomeIcon icon={faStore} />
-            <span className='inline-block ml-2'>Store</span>
+            <span className='inline-block ml-2'>Shop</span>
           </NavLink>
           <NavLink
             exact

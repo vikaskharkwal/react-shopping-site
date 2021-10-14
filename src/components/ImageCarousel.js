@@ -6,7 +6,7 @@ function ImageCarousel({ delay }) {
   return (
     <div
       className='w-full text-center bg-gray-700 overflow-hidden '
-      style={{ height: 'calc(100vh - 3.85rem)' }}>
+      style={{ height: 'calc(100vh - 4rem)' }}>
       {imageObject.map((item, index) => {
         return (
           <img

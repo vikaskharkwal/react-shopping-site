@@ -2,13 +2,21 @@
 
 This project was made in my learning journey on [The Odin Project](https://www.theodinproject.com/)
 
-To download the source code, just clone my repository.
+## Tecnology Used
+
+- ReactJS
+- React Router
+- Tailwind CSS
+
+## Downloading the Source Code
+
+To download the source code, just clone this repository.
 
 Then in the project directory, run
 
 ### `npm init`
 
-then you'll be able to edit the project for your own.
+you'll then be able to edit the project for your own.
 
 ## Useful Scripts
 

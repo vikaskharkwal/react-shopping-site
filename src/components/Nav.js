@@ -1,13 +1,12 @@
 import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoePrints } from '@fortawesome/free-solid-svg-icons';
-import { faStore } from '@fortawesome/free-solid-svg-icons';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
-import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { ReactComponent as HomeIcon } from '../assets/home.svg';
+import { ReactComponent as ShopIcon } from '../assets/shop.svg';
+import { ReactComponent as AboutIcon } from '../assets/about.svg';
+import { ReactComponent as CartIcon } from '../assets/cart.svg';
+import { ReactComponent as LogoIcon } from '../assets/logo.svg';
 import { NavLink, Link } from 'react-router-dom';
 import MenuButton from './MenuButton';
-function Nav({ theme }) {
+function Nav({ theme, isCartOpen, toggleCart }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const handleToggle = () => {
@@ -16,15 +15,20 @@ function Nav({ theme }) {
 
   return (
     <header
-      className={`z-20 flex justify-center bg-white md:shadow-md sticky top-0 ${
+      className={`z-50 flex justify-center bg-white md:shadow-md sticky top-0 self-start ${
         !isNavOpen ? 'shadow-md' : ''
       }`}>
-      <div className='w-full 2xl:container flex justify-between align-middle sm:px-4 relative'>
-        <Link to='/'>
+      <div className='w-full 2xl:container flex justify-between item-center sm:px-4 relative'>
+        <Link className={`flex`} to='/'>
           <h2
-            className={`text-${theme}-700 text-xl font-bold p-4 hover:bg-${theme}-50 transition duration-500`}>
-            <FontAwesomeIcon icon={faShoePrints} />
-            <span className='inline-block ml-2'>eKICKZ</span>
+            className={`text-${theme}-700 text-2xl font-bold  hover:bg-${theme}-50 transition duration-500 flex items-end px-4 pt-3 pb-5`}
+            title='Kickz-The Online Sneaker Store'>
+            <div style={{ transform: 'scaleX(-1)' }}>
+              <LogoIcon className={`h-5 w-auto inline-block`} />
+            </div>
+            <span className='inline-block ml-px' style={{ lineHeight: '1.1' }}>
+              kickz
+            </span>
           </h2>
         </Link>
 
@@ -36,38 +40,44 @@ function Nav({ theme }) {
             <NavLink
               exact
               activeClassName={`border-${theme}-700 bg-${theme}-50 ease-in font-semibold text-${theme}-700`}
-              className={`hover:bg-${theme}-50 p-4 text-right border-b-4 border-transparent transition duration-200 sm:opacity-100  ${
+              className={`hover:bg-${theme}-50 p-4 flex item-center text-right border-b-4 border-transparent transition duration-200 sm:opacity-100  ${
                 isNavOpen ? 'opacity-100' : 'opacity-0'
               }`}
               to='/'>
-              <FontAwesomeIcon icon={faHome} />
+              <HomeIcon className={`w-auto h-6 fill-current inline-block`} />
               <span className='inline-block ml-2'>Home</span>
             </NavLink>
             <NavLink
-              exact
               activeClassName={`border-b-4 border-${theme}-700 bg-${theme}-50 font-semibold text-${theme}-700`}
-              className={`hover:bg-${theme}-50 p-4 text-right border-b-4 border-transparent transition duration-200 sm:opacity-100  ${
+              className={`hover:bg-${theme}-50 flex items-center p-4 text-right border-b-4 border-transparent transition duration-200 sm:opacity-100  ${
                 isNavOpen ? 'opacity-100' : 'opacity-0'
               }`}
               to='/shop'>
-              <FontAwesomeIcon icon={faStore} />
+              <ShopIcon className={`w-auto h-5 fill-current inline-block`} />
+
               <span className='inline-block ml-2'>Shop</span>
             </NavLink>
             <NavLink
               exact
               activeClassName={`border-b-4 border-${theme}-700 bg-${theme}-50 font-semibold text-${theme}-700`}
-              className={`hover:bg-${theme}-50 p-4 text-right border-b-4 border-transparent transition duration-200 sm:opacity-100  ${
+              className={`hover:bg-${theme}-50 p-4 flex items-center text-right border-b-4 border-transparent transition duration-200 sm:opacity-100  ${
                 isNavOpen ? 'opacity-100' : 'opacity-0'
               }`}
               to='/about'>
-              <FontAwesomeIcon icon={faInfoCircle} />
+              <AboutIcon className={`w-auto h-5 fill-current inline-block`} />
+
               <span className='inline-block ml-2'>About</span>
             </NavLink>
           </nav>
           <div className={`flex gap-x-4`}>
             <button
-              className={`relative flex w-14 h-full flex-col justify-between px-4 py-5 hover:bg-${theme}-50 cursor-pointer`}>
-              <FontAwesomeIcon icon={faShoppingCart} size='lg' />
+              className={`relative inline-block h-full flex-col justify-between px-4 py-4 hover:bg-${theme}-50 cursor-pointer transition duration-300 ${
+                isCartOpen ? `text-${theme}-700 bg-${theme}-50` : ''
+              }`}
+              onClick={toggleCart}>
+              <CartIcon
+                className={`w-auto h-7 fill-current inline-block transition duration-300`}
+              />
             </button>
             <MenuButton
               handleToggle={handleToggle}

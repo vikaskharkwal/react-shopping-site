@@ -1,16 +1,16 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { ReactComponent as WebIcon } from '../assets/web.svg';
+import { ReactComponent as CodeIcon } from '../assets/code.svg';
 
-function About(props) {
-  console.log(props);
+function About({ theme }) {
+  document.title = `KICKZ - About`;
+
   return (
-    <div className='2xl:container mt-4 sm:mt-8 px-4 sm:px-8'>
+    <div className='mt-4 sm:mt-8 ml-auto mr-auto relative z-0 2xl:container px-4 sm:px-8'>
       <h1 className='text-4xl uppercase font-bold'>About</h1>
       <p className={`text-lg text-center mt-8 md:mt-16`}>
         Made for{' '}
         <a
-          className={`underline hover:no-underline hover:text-${props.theme}-700`}
+          className={`hover:underline no-underline text-${theme}-700`}
           href='https://www.theodinproject.com'
           target='_blank'
           rel='noreferrer'>
@@ -18,24 +18,42 @@ function About(props) {
         </a>{' '}
         by berserkwal.
       </p>
-      <div className='flex flex-col md:flex-row justify-center align-bottom text-center gap-x-16 gap-y-8 mt-8'>
+      <div className='flex flex-col md:flex-row justify-center items-center text-center gap-x-16 gap-y-8 mt-8'>
         <a
           href='https://www.github.com/berserkwal/react-shopping-site'
           rel='noreferrer'
           target='_blank'
-          className={`flex flex-col justify-between align-middle items-center gap-2 underline hover:no-underline hover:text-${props.theme}-700 transition duration-300`}>
-          <FontAwesomeIcon icon={faCode} size='7x' />
+          className={`flex flex-col w-max justify-between items-center gap-2 hover:no-underline underline hover:text-${theme}-700 transition duration-300`}>
+          <CodeIcon className={`fill-current h-32 w-auto`} />
           <h3>Source Code</h3>
         </a>
         <a
           href='https://berserkwal.github.io/'
           rel='noreferrer'
           target='_blank'
-          className={`flex flex-col justify-between align-middle items-center gap-2 underline hover:no-underline hover:text-${props.theme}-700 transition duration-300`}>
-          <FontAwesomeIcon icon={faGlobe} size='8x' />
-          <h3>Website</h3>
+          className={`flex flex-col w-max justify-between align-middle items-center gap-2 underline hover:no-underline hover:text-${theme}-700 transition duration-300`}>
+          <WebIcon className={`fill-current h-32 w-auto`} />
+          <h3>My Website</h3>
         </a>
       </div>
+      <p className={`text-lg text-center mt-8 md:mt-16`}>
+        Made using{' '}
+        <a
+          href='https://rapidapi.com/tg4-solutions-tg4-solutions-default/api/v1-sneakers/'
+          className={`hover:underline no-underline text-${theme}-700`}
+          target='_blank'
+          rel='noreferrer'>
+          V1 Sneakers API
+        </a>{' '}
+        by{' '}
+        <a
+          className={`hover:underline no-underline text-${theme}-700`}
+          href='https://tg4.solutions/'
+          target='_blank'
+          rel='noreferrer'>
+          TG4 Solutions
+        </a>
+      </p>
     </div>
   );
 }

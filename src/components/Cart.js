@@ -29,8 +29,8 @@ function Cart({
         isCartOpen ? '' : 'transform translate-x-full transition delay-500'
       }`}>
       <div
-        className={`h-full w-full absolute bg-black bg-opacity-50 backdrop-filter backdrop-blur-sm z-0  transition duration-300 ${
-          isCartOpen ? 'opacity-100 delay-300' : 'opacity-0'
+        className={`h-full w-full absolute bg-black bg-opacity-50 backdrop-filter backdrop-blur-sm z-0  transition duration-500 ${
+          isCartOpen ? 'opacity-100' : 'opacity-0'
         }`}
         onClick={toggleCart}></div>
       <div

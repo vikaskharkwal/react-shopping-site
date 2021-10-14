@@ -30,7 +30,7 @@ function Modal({
         className={`absolute h-full w-full top-0 left-0 bg-black backdrop-filter backdrop-blur-sm bg-opacity-25`}
         onClick={goBack}></div>
       <div
-        className={`bg-white h-full w-full shadow-lg px-4 py-4 relative overflow-y-auto flex flex-col transform duration-300  ${
+        className={`bg-white h-full w-full shadow-lg px-4 py-4 relative overflow-y-auto flex flex-col transform duration-500  ${
           isModalOpen
             ? 'translate-y-0 opacity-100'
             : 'translate-y-full opacity-0'

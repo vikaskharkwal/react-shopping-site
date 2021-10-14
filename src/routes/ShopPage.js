@@ -24,7 +24,7 @@ function ShopPage(props) {
   const [pageCount, setPageCount] = useState();
   const [value, setValue] = useState(page);
 
-  document.title = `The KICKZ Shop`;
+  document.title = `KICKZ Shop`;
 
   const prevPage = () => {
     // setTempPage((prevState) => {

@@ -84,7 +84,7 @@ function Cart({
                           className={`w-4 h-4 flex items-center justify-center text-white  ${
                             item.quantity <= 1
                               ? 'bg-gray-300 pointer-events-none '
-                              : `bg-${theme}-700 hover:bg-${theme}-600`
+                              : `bg-blue-700 hover:bg-blue-600`
                           }`}
                           onClick={() =>
                             decreaseQuantity(item.id, item.quantity)
@@ -99,7 +99,7 @@ function Cart({
                           className={`w-4 h-4 flex items-center justify-center text-white  ${
                             item.quantity >= 10
                               ? 'bg-gray-300 pointer-events-none'
-                              : `bg-${theme}-700 hover:bg-${theme}-600`
+                              : `bg-blue-700 hover:bg-blue-600`
                           }`}
                           onClick={() =>
                             increaseQuantity(item.id, item.quantity)
@@ -121,7 +121,7 @@ function Cart({
               <div className={`text-xl flex flex-col w-max`}>
                 <span>
                   Total:{' '}
-                  <span className={`font-bold text-${theme}-700`}>
+                  <span className={`font-bold text-blue-700`}>
                     &#36;
                     {(cartTotal + cartTax).toFixed(2)}
                     <span
@@ -138,7 +138,7 @@ function Cart({
                   toggleCart();
                   emptyCart();
                 }}
-                className={`items-center text-2xl px-2 py-1 justify-center text-white font-bold bg-${theme}-700 hover:bg-${theme}-600`}>
+                className={`items-center text-2xl px-2 py-1 justify-center text-white font-bold bg-blue-700 hover:bg-blue-600`}>
                 Checkout
               </Link>
             </div>

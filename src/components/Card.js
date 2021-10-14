@@ -21,7 +21,7 @@ function Card({ item, theme, brand }) {
   return (
     <div
       className={`  w-max h-full p-4 cursor-pointer shadow-md hover:shadow-lg transition duration-500 group overflow-hidden ${
-        item.retailPrice ? `hover:bg-${theme}-700` : `hover:bg-red-500`
+        item.retailPrice ? `hover:bg-blue-700` : `hover:bg-red-500`
       }`}
       style={{ width: 'calc(280px + 2rem)' }}
       key={item.id}>
@@ -64,7 +64,7 @@ function Card({ item, theme, brand }) {
           <p
             className={` py-1 px-2 pr-4 -mr-4 w-max text-white  transition duration-500 font-semibold shadow-sm group-hover:bg-white ${
               item.retailPrice
-                ? `group-hover:text-${theme}-700 bg-${theme}-700 `
+                ? `group-hover:text-blue-700 bg-blue-700 `
                 : 'group-hover:text-red-500 bg-red-500'
             }`}>
             {item.retailPrice ? (

@@ -74,9 +74,9 @@ function ItemDetail({ theme, addToCart, setIsCartOpen, cart }) {
             <div
               className={`flex items-center justify-between text-base lg:text-lg `}>
               <div
-                className={`font-bold text-base lg:text-3xl xl:text-4xl text-${theme}-700`}>
+                className={`font-bold text-base lg:text-3xl xl:text-4xl text-blue-700`}>
                 {data[0].retailPrice ? (
-                  <span className={`text-${theme}-700`}>
+                  <span className={`text-blue-700`}>
                     &#36;{data[0].retailPrice}{' '}
                   </span>
                 ) : (
@@ -87,7 +87,7 @@ function ItemDetail({ theme, addToCart, setIsCartOpen, cart }) {
                 <div className={`flex flex-col items-center gap-1`}>
                   <p className={`text-xs`}>Already in your cart</p>
                   <button
-                    className={` flex gap-1 items-center justify-between text-white py-1 px-2 transition duration-300 bg-${theme}-700 hover:bg-${theme}-600`}
+                    className={` flex gap-1 items-center justify-between text-white py-1 px-2 transition duration-300 bg-blue-700 hover:bg-blue-600`}
                     onClick={() => setIsCartOpen(true)}>
                     <InCart
                       className={`h-6 inline-block w-auto fill-current`}
@@ -104,7 +104,7 @@ function ItemDetail({ theme, addToCart, setIsCartOpen, cart }) {
                   className={` flex gap-1 items-center justify-between text-white py-1 px-2 transition duration-300 ${
                     !data[0].retailPrice
                       ? 'pointer-events-none bg-gray-400 cursor-not-allowed'
-                      : `bg-${theme}-700 hover:bg-${theme}-600`
+                      : `bg-blue-700 hover:bg-blue-600`
                   }`}>
                   <AddCart className={`h-6 inline-block w-auto fill-current`} />
                   Add to cart

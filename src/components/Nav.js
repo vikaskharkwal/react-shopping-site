@@ -21,7 +21,7 @@ function Nav({ theme, isCartOpen, toggleCart }) {
       <div className='w-full 2xl:container flex justify-between item-center sm:px-4 relative'>
         <Link className={`flex`} to='/'>
           <h2
-            className={`text-${theme}-700 text-2xl font-bold  hover:bg-${theme}-50 transition duration-500 flex items-end px-4 pt-3 pb-5`}
+            className={`text-blue-700 text-2xl font-bold  hover:bg-blue-50 transition duration-500 flex items-end px-4 pt-3 pb-5`}
             title='Kickz-The Online Sneaker Store'>
             <div style={{ transform: 'scaleX(-1)' }}>
               <LogoIcon className={`h-5 w-auto inline-block`} />
@@ -39,8 +39,8 @@ function Nav({ theme, isCartOpen, toggleCart }) {
             } uppercase transform flex sm:inline-flex flex-col absolute w-full left-0 top-full sm:w-max sm:flex-row sm:static sm:align-middle sm:justify-center shadow-md sm:shadow-none bg-white transition duration-500 origin-top delay sm:scale-y-100`}>
             <NavLink
               exact
-              activeClassName={`border-${theme}-700 bg-${theme}-50 ease-in font-semibold text-${theme}-700`}
-              className={`hover:bg-${theme}-50 p-4 flex item-center text-right border-b-4 border-transparent transition duration-200 sm:opacity-100  ${
+              activeClassName={`border-blue-700 bg-blue-50 ease-in font-semibold text-blue-700`}
+              className={`hover:bg-blue-50 p-4 flex item-center text-right border-b-4 border-transparent transition duration-200 sm:opacity-100  ${
                 isNavOpen ? 'opacity-100' : 'opacity-0'
               }`}
               to='/'>
@@ -48,8 +48,8 @@ function Nav({ theme, isCartOpen, toggleCart }) {
               <span className='inline-block ml-2'>Home</span>
             </NavLink>
             <NavLink
-              activeClassName={`border-b-4 border-${theme}-700 bg-${theme}-50 font-semibold text-${theme}-700`}
-              className={`hover:bg-${theme}-50 flex items-center p-4 text-right border-b-4 border-transparent transition duration-200 sm:opacity-100  ${
+              activeClassName={`border-b-4 border-blue-700 bg-blue-50 font-semibold text-blue-700`}
+              className={`hover:bg-blue-50 flex items-center p-4 text-right border-b-4 border-transparent transition duration-200 sm:opacity-100  ${
                 isNavOpen ? 'opacity-100' : 'opacity-0'
               }`}
               to='/shop'>
@@ -59,8 +59,8 @@ function Nav({ theme, isCartOpen, toggleCart }) {
             </NavLink>
             <NavLink
               exact
-              activeClassName={`border-b-4 border-${theme}-700 bg-${theme}-50 font-semibold text-${theme}-700`}
-              className={`hover:bg-${theme}-50 p-4 flex items-center text-right border-b-4 border-transparent transition duration-200 sm:opacity-100  ${
+              activeClassName={`border-b-4 border-blue-700 bg-blue-50 font-semibold text-blue-700`}
+              className={`hover:bg-blue-50 p-4 flex items-center text-right border-b-4 border-transparent transition duration-200 sm:opacity-100  ${
                 isNavOpen ? 'opacity-100' : 'opacity-0'
               }`}
               to='/about'>
@@ -71,8 +71,8 @@ function Nav({ theme, isCartOpen, toggleCart }) {
           </nav>
           <div className={`flex gap-x-4`}>
             <button
-              className={`relative inline-block h-full flex-col justify-between px-4 py-4 hover:bg-${theme}-50 cursor-pointer transition duration-300 ${
-                isCartOpen ? `text-${theme}-700 bg-${theme}-50` : ''
+              className={`relative inline-block h-full flex-col justify-between px-4 py-4 hover:bg-blue-50 cursor-pointer transition duration-300 ${
+                isCartOpen ? `text-blue-700 bg-blue-50` : ''
               }`}
               onClick={toggleCart}>
               <CartIcon

@@ -10,7 +10,7 @@ function About({ theme }) {
       <p className={`text-lg text-center mt-8 md:mt-16`}>
         Made for{' '}
         <a
-          className={`hover:underline no-underline text-${theme}-700`}
+          className={`hover:underline no-underline text-blue-700`}
           href='https://www.theodinproject.com'
           target='_blank'
           rel='noreferrer'>
@@ -23,7 +23,7 @@ function About({ theme }) {
           href='https://www.github.com/berserkwal/react-shopping-site'
           rel='noreferrer'
           target='_blank'
-          className={`flex flex-col w-max justify-between items-center gap-2 hover:no-underline underline hover:text-${theme}-700 transition duration-300`}>
+          className={`flex flex-col w-max justify-between items-center gap-2 hover:no-underline underline hover:text-blue-700 transition duration-300`}>
           <CodeIcon className={`fill-current h-32 w-auto`} />
           <h3>Source Code</h3>
         </a>
@@ -31,7 +31,7 @@ function About({ theme }) {
           href='https://berserkwal.github.io/'
           rel='noreferrer'
           target='_blank'
-          className={`flex flex-col w-max justify-between align-middle items-center gap-2 underline hover:no-underline hover:text-${theme}-700 transition duration-300`}>
+          className={`flex flex-col w-max justify-between align-middle items-center gap-2 underline hover:no-underline hover:text-blue-700 transition duration-300`}>
           <WebIcon className={`fill-current h-32 w-auto`} />
           <h3>My Website</h3>
         </a>
@@ -40,14 +40,14 @@ function About({ theme }) {
         Made using{' '}
         <a
           href='https://rapidapi.com/tg4-solutions-tg4-solutions-default/api/v1-sneakers/'
-          className={`hover:underline no-underline text-${theme}-700`}
+          className={`hover:underline no-underline text-blue-700`}
           target='_blank'
           rel='noreferrer'>
           V1 Sneakers API
         </a>{' '}
         by{' '}
         <a
-          className={`hover:underline no-underline text-${theme}-700`}
+          className={`hover:underline no-underline text-blue-700`}
           href='https://tg4.solutions/'
           target='_blank'
           rel='noreferrer'>

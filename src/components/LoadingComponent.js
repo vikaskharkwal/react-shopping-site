@@ -23,7 +23,7 @@ function LoadingComponent({ theme, text }) {
     <div
       className={`flex items-center flex-col sm:flex-row justify-center gap-4 col-span-full h-full row-span-full `}>
       <div
-        className={`h-12 w-12 bg-transparent border-4 border-gray-300 border-r-${theme}-700  animate-spin rounded-full`}></div>
+        className={`h-12 w-12 bg-transparent border-4 border-gray-300 border-r-blue-700  animate-spin rounded-full`}></div>
       <p className={`text-2xl text-gray-400`}>Loading {text}</p>
     </div>
   ) : (

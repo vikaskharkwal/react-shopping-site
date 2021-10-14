@@ -17,7 +17,7 @@ function Home({ theme }) {
           </p>
           <Link
             to='/shop'
-            className={`mt-4 w-max uppercase font-medium px-2 py-1 text-xl md:text-2xl md:px-4 md:py-3 bg-${theme}-700 text-white transition duration-100 transform hover:bg-${theme}-600`}>
+            className={`mt-4 w-max uppercase font-medium px-2 py-1 text-xl md:text-2xl md:px-4 md:py-3 bg-blue-700 text-white transition duration-100 transform hover:bg-blue-600`}>
             Visit Shop
           </Link>
         </div>

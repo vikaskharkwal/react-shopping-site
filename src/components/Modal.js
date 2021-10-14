@@ -37,7 +37,7 @@ function Modal({
         }`}
         onClick={(event) => event.stopPropagation()}>
         <div
-          className={`w-max px-1 flex items-center justify-between hover:bg-${theme}-100  text-${theme}-700 cursor-pointer underline`}
+          className={`w-max px-1 flex items-center justify-between hover:bg-blue-100  text-blue-700 cursor-pointer underline`}
           onClick={goBack}>
           Go Back
         </div>

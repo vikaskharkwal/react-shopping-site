@@ -16,11 +16,11 @@ function About({ theme }) {
           rel='noreferrer'>
           The Odin Project
         </a>{' '}
-        by berserkwal.
+        by Vikas Kharkwal.
       </p>
       <div className='flex flex-col md:flex-row justify-center items-center text-center gap-x-16 gap-y-8 mt-8'>
         <a
-          href='https://www.github.com/berserkwal/react-shopping-site'
+          href='https://www.github.com/vikaskharkwal/react-shopping-site'
           rel='noreferrer'
           target='_blank'
           className={`flex flex-col w-max justify-between items-center gap-2 hover:no-underline underline hover:text-blue-700 transition duration-300`}>
@@ -28,7 +28,7 @@ function About({ theme }) {
           <h3>Source Code</h3>
         </a>
         <a
-          href='https://berserkwal.github.io/'
+          href='/'
           rel='noreferrer'
           target='_blank'
           className={`flex flex-col w-max justify-between align-middle items-center gap-2 underline hover:no-underline hover:text-blue-700 transition duration-300`}>
